@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NOVA — A premium responsive developer registration experience built for Codec Technologies Web Development Internship by Vibhav Mishra.">
+  <title>NOVA — Developer Registration Portal</title>
+  
+  <!-- Modern Typography Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient background glow effects -->
+  <div class="ambient-glow ambient-1" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-2" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-3" aria-hidden="true"></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Top Navigation Bar -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </div>
+      <span class="brand-name">NOVA<span class="brand-dot">.</span></span>
+      <span class="version-badge">v2.6 SaaS</span>
+    </div>
+
+    <nav class="nav" aria-label="Main Navigation">
+      <a href="#registrationForm" class="nav-item active">Registration</a>
+      <span class="nav-item">Telemetry</span>
+      <span class="nav-item">Documentation</span>
+    </nav>
+
+    <div class="topbar-actions">
+      <div class="intern-badge">
+        <span class="status-pulse"></span>
+        <span>Codec Technologies · Verified Intern</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container Layout -->
+  <main class="wrapper">
+    
+    <!-- Left Hero Column (Showcase & Live Interactive Card) -->
+    <section class="hero" aria-label="Project Overview">
+      <div class="hero-grid" aria-hidden="true"></div>
+      
+      <div class="hero-content">
+        <div class="eyebrow">
+          <span class="eyebrow-line"></span>
+          <span>Web Development Internship · Codec Technologies</span>
+        </div>
+
+        <h1>Build your<br><span class="gradient-text">next chapter.</span></h1>
+        
+        <p class="hero-copy">
+          A high-performance developer onboarding portal engineered with clean semantic HTML5, reactive CSS3 glassmorphism, and real-time client-side validation logic.
+        </p>
+
+        <!-- Live Reactive Credential Card (Updates in real-time as user types) -->
+        <div class="preview-card" id="previewCard" aria-label="Live Registration Preview">
+          <div class="preview-glass-shine"></div>
+          <div class="preview-card-header">
+            <div class="chip-graphic">
+              <svg width="28" height="22" viewBox="0 0 28 22" fill="none">
+                <rect x="0.5" y="0.5" width="27" height="21" rx="3.5" fill="url(#chipGrad)" stroke="rgba(255,255,255,0.3)"/>
+                <path d="M7 6V16M14 6V16M21 6V16M0 11H28" stroke="rgba(255,255,255,0.4)" stroke-width="1.2"/>
+                <defs>
+                  <linearGradient id="chipGrad" x1="0" y1="0" x2="28" y2="22" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#38bdf8" stop-opacity="0.3"/>
+                    <stop offset="1" stop-color="#818cf8" stop-opacity="0.2"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <span class="chip-label">NOVA ACCESS ID</span>
+            </div>
+            <div class="preview-status">
+              <span class="live-dot"></span> LIVE SYNC
+            </div>
+          </div>
+
+          <div class="preview-card-body">
+            <div class="preview-name-group">
+              <span class="preview-label">APPLICANT NAME</span>
+              <h3 class="preview-name" id="previewName">Vibhav Mishra</h3>
+            </div>
+            <div class="preview-meta-group">
+              <div>
+                <span class="preview-label">COURSE STREAM</span>
+                <p class="preview-value" id="previewCourse">B.Tech — Computer Science</p>
+              </div>
+              <div class="text-right">
+                <span class="preview-label">SECURITY TIER</span>
+                <p class="preview-value preview-tier">Client-Side Level 2</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="preview-card-footer">
+            <div class="security-tag">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <span>Zero-Lag Validation</span>
+            </div>
+            <span class="card-serial">NOVA-2026-REG</span>
+          </div>
+        </div>
+
+        <!-- Metric Stat Cards -->
+        <div class="metrics">
+          <div class="metric">
+            <div class="metric-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <div>
+              <strong>10</strong>
+              <small>Validated Fields</small>
+            </div>
+          </div>
+
+          <div class="metric">
+            <div class="metric-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <div>
+              <strong>100%</strong>
+              <small>Responsive UI</small>
+            </div>
+          </div>
+
+          <div class="metric">
+            <div class="metric-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <div>
+              <strong>JS</strong>
+              <small>Client Regex Engine</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Orbital Rings & Floating Elements -->
+      <div class="ring r1" aria-hidden="true"></div>
+      <div class="ring r2" aria-hidden="true"></div>
+      
+      <!-- Creator Profile Footer -->
+      <div class="profile">
+        <div class="avatar" aria-hidden="true">VM</div>
+        <div class="profile-info">
+          <small class="profile-role">Frontend Engineer &amp; Intern</small>
+          <strong class="profile-name">Vibhav Mishra</strong>
+          <span class="profile-org">Codec Technologies · July — August 2026</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right Form Section -->
+    <section class="form-panel" aria-label="Registration Form Section">
+      <div class="form-inner">
+        
+        <!-- Form Header -->
+        <div class="form-top">
+          <div>
+            <span class="section-label">ACCOUNT ONBOARDING</span>
+            <h2>Create your account</h2>
+            <p class="sub">Complete all fields below to initiate your developer credentials.</p>
+          </div>
+          <div class="badge" title="Validated with client-side JavaScript">
+            <span class="badge-icon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </span>
+            <span>Real-time Validation</span>
+          </div>
+        </div>
+
+        <!-- Progress Tracker Bar -->
+        <div class="progress-wrap">
+          <div class="progress-labels">
+            <span class="progress-text">Form Completion</span>
+            <span class="progress-percent" id="progressPercent">8%</span>
+          </div>
+          <div class="progress" role="progressbar" aria-label="Registration Progress">
+            <span style="width: 8%;"></span>
+          </div>
+        </div>
+
+        <!-- Main Registration Form -->
+        <form id="registrationForm" novalidate>
+          <div class="grid">
+            
+            <!-- 1. Full Name (Full width) -->
+            <div class="field full">
+              <label for="fullName">Full Name</label>
+              <div class="input">
+                <span class="ico" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </span>
+                <input id="fullName" type="text" placeholder="e.g. Vibhav Mishra" autocomplete="name" spellcheck="false">
+                <span class="valid-indicator" aria-hidden="true">✓</span>
+              </div>
+              <small class="err" id="fullNameError" role="alert"></small>
+            </div>
+
+            <!-- 2. Email Address -->
+            <div class="field">
+              <label for="email">Email Address</label>
+              <div class="input">
+                <span class="ico" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </span>
+                <input id="email" type="email" placeholder="vibhav@example.com" autocomplete="email">
+                <span class="valid-indicator" aria-hidden="true">✓</span>
+              </div>
+              <small class="err" id="emailError" role="alert"></small>
+            </div>
+
+            <!-- 3. Phone Number -->
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <div class="input">
+                <span class="ico" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </span>
+                <input id="phone" type="tel" maxlength="10" placeholder="10-digit mobile number" autocomplete="tel">
+                <span class="valid-indicator" aria-hidden="true">✓</span>
+              </div>
+              <small class="err" id="phoneError" role="alert"></small>
+            </div>
+
+            <!-- 4. Date of Birth -->
+            <div class="field">
+              <label for="dob">Date of Birth</label>
+              <div class="input">
+                <span class="ico" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                </span>
+                <input id="dob" type="date" autocomplete="bday">
+                <span class="valid-indicator" aria-hidden="true">✓</span>
+              </div>
+              <small class="err" id="dobError" role="alert"></small>
+            </div>
+
+            <!-- 5. Gender -->
+            <div class="field">
+              <label for="gender">Gender</label>
+              <div class="input">
+                <span class="ico" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="9"></circle>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </span>
+                <select id="gender">
+                  <option value="">Select gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
+                <span class="select-arrow" aria-hidden="true">▾</span>
+              </div>
+              <small class="err" id="genderError" role="alert"></small>
+            </div>
+
+            <!-- 6. Course / Program -->
+            <div class="field">
+              <label for="course">Course / Program</label>
+              <div class="input">
+                <span class="ico" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                  </svg>
+                </span>
+                <select id="course">
+                  <option value="">Choose a course</option>
+                  <option value="B.Tech — Computer Science">B.Tech — Computer Science</option>
+                  <option value="B.Tech — Information Technology">B.Tech — Information Technology</option>
+                  <option value="BCA">BCA</option>
+                  <option value="MCA">MCA</option>
+                  <option value="Other">Other</option>
+                </select>
+                <span class="select-arrow" aria-hidden="true">▾</span>
+              </div>
+              <small class="err" id="courseError" role="alert"></small>
+            </div>
+
+            <!-- 7. City -->
+            <div class="field">
+              <label for="city">City</label>
+              <div class="input">
+                <span class="ico" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </span>
+                <input id="city" type="text" placeholder="e.g. New Delhi" autocomplete="address-level2">
+                <span class="valid-indicator" aria-hidden="true">✓</span>
+              </div>
+              <small class="err" id="cityError" role="alert"></small>
+            </div>
+
+            <!-- 8. Password -->
+            <div class="field">
+              <label for="password">Password</label>
+              <div class="input">
+                <span class="ico" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
+                </span>
+                <input id="password" type="password" placeholder="Min. 8 characters" autocomplete="new-password">
+                <button class="toggle" type="button" data-target="password" aria-label="Toggle password visibility">Show</button>
+              </div>
+              <small class="err" id="passwordError" role="alert"></small>
+            </div>
+
+            <!-- 9. Confirm Password -->
+            <div class="field">
+              <label for="confirmPassword">Confirm Password</label>
+              <div class="input">
+                <span class="ico" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </span>
+                <input id="confirmPassword" type="password" placeholder="Repeat password" autocomplete="new-password">
+                <button class="toggle" type="button" data-target="confirmPassword" aria-label="Toggle confirm password visibility">Show</button>
+              </div>
+              <small class="err" id="confirmPasswordError" role="alert"></small>
+            </div>
+          </div>
+
+          <!-- Terms and conditions checkbox -->
+          <div class="terms-container">
+            <label class="terms">
+              <input id="terms" type="checkbox">
+              <span class="terms-label">
+                I agree to the <a href="#" onclick="return false">terms and conditions</a> and data privacy guidelines.
+              </span>
+            </label>
+            <small class="err terms-err" id="termsError" role="alert"></small>
+          </div>
+
+          <!-- Submit Button -->
+          <button class="submit" type="submit">
+            <span class="submit-shine" aria-hidden="true"></span>
+            <span class="submit-text">Complete Registration</span>
+            <span class="go" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </button>
+
+          <p class="fineprint">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="fineprint-lock">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            Front-end engineering demonstration built with HTML5, modern CSS3 &amp; vanilla JavaScript.
+          </p>
+        </form>
+
+        <!-- Success Panel State (Initially Hidden) -->
+        <section class="success" id="successState" aria-live="polite" aria-hidden="true">
+          <div class="success-glow" aria-hidden="true"></div>
+          
+          <div class="success-head">
+            <div class="success-check" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <div>
+              <p class="section-label success-badge-label">CREDENTIALS VERIFIED</p>
+              <h3>Registration successful.</h3>
+            </div>
+          </div>
+
+          <p class="success-desc">
+            Your details passed all client-side validation checks with zero errors. This is an interactive frontend demo built for academic viva &amp; internship review.
+          </p>
+
+          <div class="summary-wrapper">
+            <div class="summary-title">Validated Registration Record</div>
+            <div class="summary" id="summary">
+              <!-- Dynamically populated by script.js -->
+            </div>
+          </div>
+
+          <button class="again" id="again" type="button">
+            <span>Register another account</span>
+            <span class="again-icon" aria-hidden="true">↺</span>
+          </button>
+        </section>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Clean Project Footer -->
+  <footer>
+    <div class="footer-content">
+      <span><strong>Vibhav Mishra</strong> · Codec Technologies</span>
+      <span class="footer-divider">•</span>
+      <span>Web Development Internship</span>
+      <span class="footer-divider">•</span>
+      <span>14 July 2026 — 14 August 2026</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
